@@ -1,5 +1,7 @@
 public class SmartTv {
     
+    // classes que serão executadas em usuario
+
     int volume = 25;
     int canal = 1;
     boolean ligada = false;
