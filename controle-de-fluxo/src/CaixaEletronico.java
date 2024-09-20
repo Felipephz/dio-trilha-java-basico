@@ -6,14 +6,14 @@ public class CaixaEletronico {
         // caso o valor solicitado seja maior q saldo, a estrutura n será executada
         double valorSolicitado = 17.0;
 
-        //estrutura condicional simples
+        //estrutura condicional simples (um fluxo)
         if (valorSolicitado < saldo)
         saldo = saldo - valorSolicitado;
 
 
         System.out.println(saldo);
 
-        /* estrutura condicional composta.
+        /* estrutura condicional composta
           
           double saldo = 25.0;
           double valorSolicitado = 17.0;
