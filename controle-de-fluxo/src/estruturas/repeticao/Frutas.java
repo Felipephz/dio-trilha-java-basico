@@ -1,4 +1,4 @@
-
+package estruturas.repeticao;
 
 public class Frutas {
     public static void main(String[] args) {

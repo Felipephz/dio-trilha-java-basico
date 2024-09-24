@@ -1,3 +1,4 @@
+package estruturas.repeticao;
 
 
 public class ExemploFor {

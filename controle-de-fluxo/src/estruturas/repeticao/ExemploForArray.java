@@ -1,3 +1,5 @@
+package estruturas.repeticao;
+
 public class ExemploForArray {
     public static void main(String[] args) {
         
