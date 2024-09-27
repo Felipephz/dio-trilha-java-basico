@@ -1,0 +1,596 @@
+Java:
+
+Java é uma linguagem da programação inventada por James Gosling e inicialmente desenvolvida pela empresa Sun. Atualmente a empresa que gerencia ela é a Oracle.
+
+O Java utiliza várias funcionalidades (features) que buscam melhor desempenho na linguagem.
+
+A linguagem Java é orientada a objetos, ou seja, tudo na linguagem Java são escritos em termos CLASSES e OBJETOS. Para começar a desenvolver softwares de forma consistente na linguagem Java, é necessário compreender os pilares da Programação Orientada a Objetos (POO). Eles são:
+
+Classes e objetos
+Encapsulamento
+Abstração
+Herança
+Polimorfismo
+
+Java é uma plataforma independente, e o objetivo de design da javasoft people , é criar uma linguagem que funcione em qualquer plataforma. Plataforma é o ambiente de hardware ou software no qual o programa é utilizado.
+
+O conceito WORA (Write Once Run Anywere) e o recurso indepente de plataforma tornam o java portatil. A agora os desenvolvedores podem obter o mesmo resultado em qualquer máquina, escrevendo apenas uma vez. A razão por isso é JVM e Bytecode.
+
+As linguagens usam o compilador ou o interpretador, mas o Java utiliza os dois. Os progamas Java são compilados para gerar arquivos bytecode e a JVM (Java Virtual Machine) interpreta os arquivos bytecode durante a execução
+
+Thread é um subprocesso leve e independente de um programa em execução (ou seja, processo) que compartilha recursos. Multi-thread é o nome dado ao processo de vários threads sendo executados simultaneamente, e é esse que o Java usa.
+
+JDK: Você utiliza o JDK para compilar o seu código-fonte e gerar o arquivo bytecode (arquivo com a extensão .class).
+JVM: Para executar o seu programa, a JVM lê o seu arquivo compilado (.class) 
+JRE: As bibliotecas padrões do Java que estão no JRE.
+
+Java SE = Standard Edition
+Contém os recursos básicos (java.lang, java.io, java.math, java.net, java.util, etc...). É normalmente por onde deve-se começar o aprendizado.
+
+Java EE = Enterprise Edition
+É indicado para um uso mais robusto. Aplicações de larga escala, sistemas distribuídos, etc. Possui os recursos básicos (JAVA SE), obviamente, e recursos extras como bibliotecas para acesso a bancos de dados (JDBC, JPA), APIs diversas (JMS, RMI), Java Server Pages, servlets, portlets, etc.
+
+Java ME = Micro Edition
+Indicado para dispositivos mobile e sistemas embutidos. Essa edição é baseada numa antiga versão do JAVA SE.
+
+Anatomia das Classe (Java)
+
+Toda classe vai existir dentro da pasta "src"
+
+O nome do arquivo e seus complementos devem estar em maiúsculo.
+
+O nome da classe tem que ser o mesmo do arquivo
+
+Para declararmos variáveis podemos utilizar caracteres, números e símbolos porem precisamos seguir algumas regras. Deve conter apenas letras, _ (underline), $ e números de 0 a 9. Deve começar com letras (preferencialmente), $, _, jamais com números. Não pode conter espaços. Não podemos usar palavras-chaves da linguagem. O nome deve ser único dentro do escopo
+
+Toda variável tem que ser escrita minúscula, porem se for composta a primeira letra da segunda palavra tem que ser maiúscula. o nome dessa pratica para nomear variáveis dessa forma é "camelCase"
+
+Se a classe é executável (tem a capacidade de realizar uma inicialização do projeto ou de forma independente).
+Ea precisa de um método "main" (nome do método) e com isso ele precisa seguir um padrão que é: public static "void" main (não retornara nada, só executara), que irá esperar dentro de parâmetros, um parâmetro especial do tipo "String []" e determinamos o parâmetro um "array" e chamaremos ele de "args" e dentro deste método terá mais um corpo. Que ficará assim:
+
+
+    public static void main (String [] args) {
+
+          //E tudo que escrevermos aqui dentro existira apenas dentro deste metodo 
+    }
+
+Operadores.
+
+São símbolos especiais que tem um significado próprio para a linguagem e estão associados a determinadas operações.
+
+"=": Dá valores a suas variáveis
+"+": Adição ( Se for em texto, realizara uma concatenação
+"-": Subtração
+"*": Multiplicação
+"/": Divisão
+
+Operadores Unários: São utilizados juntamente com um outro operador aritmético 
+
+"+": Números são positivos sem esse operador explicitamente
+"-": Nega um número ou expressão aritmética
+"++": Incrementa o valor em 1 unidade
+"--": Decrementa o valor em 1 unidade
+"!": Nega o valor de uma expressão booleana e inverte
+
+Operador Ternário: É uma forma resumida para definir uma condição e escolher por um dentre dois valores. Você deve pensar numa condição ternaria como se fosse uma condição IF normal, porém, de uma forma em que toda sua estrutura está escrita em uma única linha.
+
+<Expressão Condicional> ? <Caso condição seja true> : <Caso condição seja false>
+
+Operadores Relacionais: Avaliam relações entre duas variáveis ou expressões. Neste caso, mais precisamente, definem se o operando á esquerda é igual, diferente, menor, menor ou igual, maior ou igual ao da direita, retornando um valor booleano como resultado
+
+"==": Verifica se dois valores são iguais
+"!=": Existe/Verifica se dois valores são diferentes
+">":  Repara/Compara se um valor é maior a outra
+">=": Repara/Compara se um valor é maior ou igual que outro
+"<": Repara/Compara se um valor é menor que outro
+"<=": Repara/Compara se um valor é menor ou igual que outro
+
+Operadores Lógicos: Representam o recurso que nos permite criar expressões logicas maiores a partir da junção de duas ou mais expressões.
+"&&": Operador logico "E"
+"//": Operador logico "OU"
+
+Métodos.
+
+Todas as ações das aplicações são consideradas métodos.
+
+Uma classe é definida por atributos e métodos. Já vimos que são, em sua grande maioria, variáveis de diferentes tipos e valores. Os métodos por sua vez, correspondem a funções ou sub-rotinas disponíveis dentro de nossas classes.
+
+Critérios de métodos: Devem ser nomeados como verbo e seguir padrão camelCase. (importante: Não existe em Java o conceito de métodos globais. Todos os métodos devem sempre ser definidos dentro de um classe.
+
+Como atribuir um método:
+
+public void (nome do método) (parâmetro do método) {
+// Logica do método
+}
+
+Escopos.
+
+Escopos de classe: Escopo em nível de classe (variáveis ​​de instância) — qualquer variável declarada em uma classe está disponível para todos os métodos dessa classe. Dependendo de seu modificador de acesso (ou seja, público ou privado), às vezes pode ser acessado fora da classe. Portanto, se uma variável é uma variável de classe, ela está vinculada a um objeto específico e existe enquanto houver um objeto dessa classe. Se não houver objeto, não haverá cópia da variável. A variável é visível de todos os métodos da classe, independentemente de serem declarados antes ou depois dela. Cada objeto tem sua própria variável independente de outros objetos. O acesso a uma variável de métodos estáticos não é possível. 
+
+Escopos de método: Qualquer variável declarada em um método, incluindo argumentos, não é acessível fora desse método. Todas as variáveis ​​declaradas dentro dos métodos são visíveis desde o início de sua declaração até o final do método. Se uma variável for um argumento de função, ela ficará visível em todo o corpo desse método.
+
+Escopos de fluxo: Se uma variável é definida/declarada em algum bloco de código, ela existe até o final desse bloco de código. Normalmente, essas variáveis ​​existem entre as chaves em que são definidas. Muitas vezes, o escopo do bloco pode ser uma variável de loop. Uma variável declarada em uma condição de loop [for] não é acessível fora do loop, a menos que você a tenha definido previamente. 
+
+Palavras reservadas: São identificadores de uma linguagem que já possuem uma finalidade especifica, portanto não podem ser utilizados para nomear variáveis, classes, métodos ou atributos. O Java possui 52 palavras reservadas. Todas essas palavras são classificadas por grupos e escritas em letra minúscula, sendo identificadas com uma cor especial pela maioria das IDE'S.
+
+Controle de pacotes.
+
+import: import pacotes ou classes par dentro do código
+package: especifica a que pacote todas as classes de um arquivo pertencem.
+
+modificadores de acesso.
+
+public: acesso de qualquer classe.
+private: acesso apenas dentro da classe.
+protected: acesso por classes no mesmo pacote e subclasses. (uso em concepção de herança na linguagem).
+
+Tipos e variáveis.
+
+Primitivas
+
+int: um numero inteiro de 32 bits (signed) (principal)
+long: um inteiro de 64 bits (signed) 
+double: um numero de ponto flutuante de 64 bits (signed) (números quebrados)
+booLean: um valor indicando verdadeiros ou falsos
+byte: um inteiro de 8 bits (signed)
+short: um inteiro de 32 bits (signed)
+float: um numero de ponto flutuante de 32 bits (signed)
+char: um character Unicode (16-bit unsigned)
+void: indica que o método não tem retorno de valor
+
+Modificadores de classes, variáveis ou métodos.
+
+abstract: classe que não pode ser instanciada ou um método que precisa ser implementado por uma subclasse não abstrata.
+class: especifica uma classe.
+extends: indica a superclasse que a subclasse está estendendo.
+final: Determina que a variável não pode ser alterada. impossibilita que uma seja estendida, que um método seja sobrescrito ou que uma variável seja reinicializada (caso a variável está maiúscula nos já consideramos ela "final").
+interface: especifica uma interface
+native: indica que um método está escrito em uma linguagem dependente de plataforma, como o C.
+new: instancia um novo projeto, chamando seu construtor.
+static: faz um método ou variável pertencer á classe ao invés de ás instancias
+strictfp: usado em frente a um método ou classe para indicar que os números de ponto flutuante seguirão as regras de ponto flutuante em todas as expressões.
+synchronized: indica que um método só pode ser acessado por uma thread de cada vez
+transiente: impede a serialização de campos
+volatile: indica que uma variável pode ser alterada durante o uso de threads.
+
+Controle de fluxo dentro de um bloco de codigo
+   
+Classes.
+
+String: Representa uma sequência de caracteres. Usada para armazenar e manipular texto.
+Integer: É um wrapper para o tipo primitivo int. Permite que os inteiros sejam usados como objetos.
+ArrayList: Implementa uma lista redimensionável de elementos. Usada para armazenar coleções de dados, onde o tamanho pode ser alterado dinamicamente.
+HashMap: Armazena pares de chave e valor, permitindo a busca rápida de valores associados a chaves.
+Scanner: Usada para ler a entrada do usuário ou de arquivos. Pode interpretar dados em vários formatos, como inteiros, strings e números de ponto flutuante.
+File: Representa um arquivo ou diretório no sistema de arquivos. Usada para manipular arquivos (criar, excluir, verificar existência).
+Thread: Representa um fluxo de execução separado, permitindo a criação de programas multithreaded.
+Math: Fornece métodos para operações matemáticas, como funções trigonométricas, logaritmos e cálculos de potência.
+Exception: Base para todas as exceções no Java. Usada para capturar e tratar erros em tempo de execução.
+JFrame: Parte da biblioteca Swing, usada para criar janelas gráficas em aplicações desktop.
+
+Constantes.
+
+System: É uma classe do sistema, que tem inúmeras operações de input e de output dentro de nossas aplicações.
+out: É uma saída
+print: Imprime um texto
+return: Retorna algo do seu método
+cast (casting): Muda o formato da variável
+
+Declarando variáveis e métodos 
+
+Variáveis: Tipo NomeBemDefinido = Atribuição (opcional em alguns casos)
+Métodos: TipoRetorno NomeObjetivoNoInfinitivo Parametro(s)
+
+Identação 
+
+Indentar é um termo utilizado para escrever o código do programa de forma hierárquica, facilitando assim a visualização e o entendimento do programa.
+
+Documentação
+
+Uma das maiores características da linguagem Java é que desde suas primeiras versões tínhamos em nossas mãos uma documentação rica e detalhada dos recursos da linguagem.
+
+Tipos de comentários.
+
+// = para adicionar um comentário de uma única linha
+/* = para adicionar um comentário de múltiplas linhas
+/** = é usado para identificar que você pretende elaborar um comentário a nível de documentação.
+
+Tags.
+
+Mas e quais as informações que obtemos através de classes documentadas na linguagem ? Java Documentation é composto por tags que representam dados relevantes para a compreensão da proposta de uma classe e os conjunto de seus métodos e atributos conforme tabela abaixo:
+
+@autor: Autor / Criador
+@version: Versão do recurso disponibilizado
+@since:	Versão / Data de início da disponibilização do recurso
+@param:	Descrição dos parâmetros dos métodos criados
+@return: Definição do tipo de retorno de um método
+@throws: Se o método lança alguma exceção 
+
+Java Doc: Javadoc é um gerador de documentação criado pela Sun Microsystems para documentar a API dos programas em Java. O resultado é expresso em HTML. É constituído, basicamente, por algumas marcações muitos simples inseridas nos comentários do programa.
+
+Terminal.
+
+Nem sempre executamos nosso programa Java pela IDE, já pensou nossos clientes tendo que instalar o Eclipse ou VsCode para rodar o sistema em sua empresa ?
+
+Com a JVM devidamente configurada, nós podemos criar um executável do nosso programa e disponibilizar o instalador para qualquer sistema operacional.
+
+Como executar:
+
+Abra o MS-DOS ou Power Shell
+Localize o diretório do seu projeto: cd C:\estudos\dio-trilha-java-basico\java-terminal
+Acesse a pasta **** bin: ** cd bin**
+Agora digite o comando:**java MinhaClasse ** (nome da sua classe sem a extensão .class)
+
+Argumentos.
+
+Quando executamos uma classe que contenha o método main, o mesmo permite que passemos um array [] de argumentos do tipo String. Logo podemos após a definição da classe a ser executada informar estes parâmetros, exemplo:
+
+java MinhaClasse argumentoUm argumentoDois
+
+Exemplo
+
+public class AboutMe {
+    public static void main(String[] args) {
+        //os argumentos começam com indice 0
+        String nome = args [0];
+        String sobrenome = args [1];
+        int idade = Integer.valueOf(args[2]); //vamos falar sobre Wrappers
+        double altura = Double.valueOf(args[3]);
+
+        System.out.println("Ola, me chamo " + nome + " " + sobrenome);
+        System.out.println("Tenho " + idade + " anos ");
+        System.out.println("Minha altura é " + altura + "cm ");
+    }
+}
+
+Passando valores dos argumentos pela IDE (VS code):
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "request": "launch",
+            "mainClass": "AboutMe",
+            "args": ["GLEYSON", "SAMPAIO", "28", "1.58"]
+        }
+    ]
+}
+
+Executando o programa agora no terminal:
+
+cd C:\estudos\dio-trilha-java-basico\java-terminal
+cd bin
+
+java AboutMe GLEYSON SAMPAIO 28 1.58
+
+
+Scanner.
+
+Nos exemplos anteriores percebemos que podemos receber dados digitados pelo usuário do nosso sistema, porém tudo precisa estar em uma linha e também é necessário informar os valores nas posições correspondentes. Esta abordagem pode deixar margens de execução com erro do nosso programa. Para isso, com a finalidade de deixar as nossas entradas de dados mais seguras agora vamos receber estes dados via Scanner.
+
+A classe Scanner permite que o usuário tenha uma interação mais assertiva com o nosso programa, veja como vamos mudar o nosso programa AboutMe para deixar mais intuitivo aos usuários.
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class AboutMe {
+    public static void main(String[] args) {
+        //criando o objeto scanner
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+        
+        System.out.println("Digite seu nome");
+        String nome = scanner.next();
+        
+        System.out.println("Digite seu sobrenome");
+        String sobrenome = scanner.next();
+
+        System.out.println("Digite sua idade");
+        int idade = scanner.nextInt();
+        
+        System.out.println("Digite sua altura");
+        double altura = scanner.nextDouble();
+
+        
+        //imprimindo os dados obtidos pelo usuario
+        System.out.println("Ola, me chamo " + nome + " " + sobrenome);
+        System.out.println("Tenho " + idade + " anos ");
+        System.out.println("Minha altura é " + altura + "cm ");
+        
+        
+    }
+}
+
+Controle de fluxo.
+
+Controle de fluxo é a habilidade de ajustar a maneira como um programa realiza suas tarefas. Por meio de instruções especiais, chamadas de comandos, essas tarefas podem ser executadas seletivamente, repetidamente ou excepcionalmente.
+
+Classificação:
+Estruturas condicionais: if-else, switch-case
+Estruturas de repetição: for, while, do-while
+Estruturas de exceções: try-catch-finally, throw
+
+OBS: Caso a estrutura tenha mais de uma função será necessário o uso de {}.
+
+Estrutura condicional simples
+
+Quando ocorre uma validação de execução de fluxo somente quando a condição for positiva, consideramos como uma estrutura Simples.
+
+Estrutura condicional composta
+
+Algumas vezes o nosso programa deverá seguir mais de uma jornada de execução condionado a uma regra de negócio, este cenário é demoninado Estrutura Condicional Composta.
+
+Condicionais encadeadas
+
+Em um controle de fluxo condicional, nem sempre nos limitamos ao se (if) e senão (else), poderemos ter uma terceira, quarta e ou inúmeras condições.
+
+Switch Case
+
+A estrutura switch compara o valor de cada caso com o da variável sequencialmente, e sempre que encontra um valor correspondente, executa o código associado ao caso. Para evitar que as comparações continuem a ser executadas após um caso correspondente ter sido encontrado, acrescentamos o comando break no final de cada bloco de códigos. O comando break, quando executado, encerra a execução da estrutura onde ele se encontra.
+
+Estruturas de repetição:
+
+Laços de repetição, também conhecidos como laços de iteração ou simplesmente loops, são comandos que permitem iteração de código, ou seja, que comandos presentes no bloco sejam repetidos diversas vezes.
+
+For
+
+O comando for (na tradução literal para a língua portuguesa “para”) permite que uma variável contadora seja testada e incrementada a cada iteração, sendo essas informações definidas na chamada do comando. O comando for recebe como entrada uma variável contadora, a condição para continuar a execução e o valor de incrementação.
+
+A estrutura de sintaxe do controle de repetição for é exibida abaixo:
+
+//estrutura do controle de fluxo for
+
+for (bloco de inicialização; expressão booleana de validação; bloco de atualização)
+{
+     // comando que será executado até que a 
+     // expressão de validação torne-se falsa 
+}
+
+For Each
+
+O uso do for / each está fortemente relacionado com um cenário onde contenha um array ou coleção, e assim, a interação é baseada aos elementos da coleção.
+
+break e continue
+
+Break significa quebrar, parar, frear, interromper. E é isso que se faz quando o Java encontra esse comando pela frente. Continue, como o nome diz, ele 'continua' o laço. O comando break interrompe o laço, já o continue interrompe somente a interação atual.
+
+While
+
+O laço while (na tradução literal para a língua portuguesa “enquanto”) determina que enquanto uma condição for válida, o bloco de código será executado. O laço while testa a condição antes de executar o código, logo, caso a condição seja inválida no primeiro teste o bloco nem será executado.
+
+A estrutura de sintaxe do controle de repetição while é exibida abaixo:
+
+//estrutura do controle de fluxo while
+
+while (expressão booleana de validação)
+{
+     // comando que será executado até que a 
+     // expressão de validação torne-se falsa 
+}
+
+Do While
+
+O laço do / while (na tradução literal para a língua portuguesa “faça…enquanto”), assim como o laço while, considera que enquanto uma determinada condição for válida o bloco de código será executado. Entretanto, do / while testa a condição após executar o código,sendo assim, mesmo que a condição seja considerada inválida no primeiro teste o bloco será executado pelo menos uma vez.
+
+A estrutura de sintaxe do controle de repetição do / while é exibida abaixo:
+
+//estrutura do controle de fluxo do while
+
+do
+{
+    // comando que será executado até que a 
+     // expressão de validação torne-se falsa 
+}
+while (expressão booleana de validação);
+
+Estruturas Excepcionais.
+
+Exceções
+
+Ao executar o código Java, diferentes erros podem acontecer: erros de codificação feitos pelo programador, erros devido a entrada errada ou outros imprevistos.
+
+Quando ocorre um erro, o Java normalmente para e gera uma mensagem de erro. O termo técnico para isso é: Java lançará uma exceção (jogará um erro).
+
+De forma interpretativa em Java, um erro é algo irreparável, a aplicação trava ou é encerrada drasticamente. Já exceções é um fluxo inesperado da nossa aplicação, exemplo: Querer dividir um valor por zero, querer abrir um arquivo que não existe, abrir uma conexão de banco com usuário ou senha inválida. Todos estes cenários e os demais não são erros mas sim fluxos não previstos pela aplicação.
+
+É ai que entra mais uma responsabilidade do desenvolvedor, prever situações iguais a estas e realizar o que denominamos de Tratamento de Exceções.
+
+onhecendo algumas exceções já mapeadas
+A linguagem Java dispõe de uma vasta lista de classes que representam exceções, abaixo iremos apresentar as mais comuns:
+
+Nome	Causa
+java.lang.NullPointerException:	Quando tentamos obter alguma informação de uma variável nula.
+java.lang.ArithmeticException:	Quando tentamos dividir um valor por zero.
+java.sql.SQLException:	Quando existe algum erro relacionado a interação com banco de dados.
+java.io.FileNotFoundException:	Quando tentamos ler ou escrever em um arquivo que não existe.
+
+Tratamento de exceções
+
+E quando inevitavelmente ocorrer uma exceção? Como nós desenvolvedores podemos ajustar o nosso algoritmo para amenizar o ocorrido?
+
+A instrução try permite que você defina um bloco de código para ser testado quanto a erros enquanto está sendo executado.
+
+A instrução catch permite definir um bloco de código a ser executado, caso ocorra um erro no bloco try.
+
+A instrução finally permite definir um bloco de código a ser executado independente de ocorrer um erro ou não. As palavras-chave try e catch vêm em pares:
+
+Estrutura de um bloco com try e catch
+
+try {
+  //  bloco de código conforme esperado
+}
+catch(Exception e) {// precisamos saber qual exceção
+  // bloco de código que captura as exceções que podem acontecer
+  // em caso de um fluxo não previsto
+}
+
+O bloco try / catch pode conter um conjunto de catchs correspondentes a cada exceção que prevista em uma funcionalidade do programa.
+
+Exceções customizadas
+
+Nós podemos criar nossas próprias exceções baseadas em regras de negócio e assim melhor direcionar quem for utilizar os recursos desenvolvidos no projeto, exemplo:
+
+Imagina que como regra de negócio, para formatar um cep necessita sempre de ter 8 dígitos, caso contrário lançará uma exceção que denominamos de CepInvalidoException.
+Primeiro criamos nossa exceção:
+public class CepInvalidoException extends Exception {}
+Em seguida criamos nosso método de formatação de cep.
+static String formatarCep(String cep) throws CepInvalidoException{
+        if(cep.length() != 8)
+          throw new CepInvalidoException();
+        
+          //simulando um cep formatado
+          return "23.765-064";
+    }
+
+Debbuging Java.
+
+Erros de programação são denominados bugs e o processo de encontrar e corrigir bugs é chamado de depuração ou debugging.
+
+De forma geral, a depuração é uma tarefa difícil e trabalhosa, e a dificuldade varia de acordo com o ambiente de desenvolvimento, o que inclui a linguagem de programação e as ferramentas disponíveis, como depuradores.
+
+Existem duas grandes categorias que englobam a natureza do erro:
+
+Erros de Sintaxe:
+
+É um erro nas regras estabelecidas da linguagem:
+Parênteses, chaves, colchetes que abrem mas não fecham.
+Duas instruções sem um ponto-e-vírgula entre elas;
+Uma palavra-chave sendo usada numa posição inesperada.
+
+Erros de Semântica:
+
+É um erro na "lógica do código", em sua semântica, o código está sintaticamente correto, porém não faz o que se esperava dele.
+Tentar dividir um número por uma String ou por zero.
+Atribuir um valor incoerente a um tipo de dado.
+Tentar fechar um arquivo que não foi aberto.
+
+Depuração/Debugging
+
+Linguagens de alto nível tornam a depuração mais fácil, pois fornecem mais ferramentas para identificar erros, como o tratamento de exceções.
+
+Os depuradores funcionam assumindo o controle do tempo de execução de um programa e permitindo que você o observe e controle. Para fazer isso, ele mostra a pilha do programa e permite que você a atravesse em qualquer direção. Quando você está em um depurador, obtém uma imagem mais completa de um quadro de pilha do que quando olha os rastreamentos de pilha em uma mensagem de log.
+
+Pilha de Execução de um Programa Java/Stack Trace
+
+Pilha de Execução:
+
+Toda invocação de método é empilhada em uma estrutura de dados que isola a área de memória de cada um. Quando um método termina (retorna), ele volta para o método que o invocou.
+
+Stack Trace:
+
+É a matriz onde encontramos a pilha de excecução da exceção. Em outras palavras, podemos dizer que o rastreamento da pilha busca (rastreio) para a próxima linha onde a exceção pode surgir.
+
+IDE:
+
+É o programa onde nosso código será desenvolvido.
+
+IDE - Integrated Devolopment Enviroment ou Ambiente de desenvolvimento Integrado. É um software que dispõe recursos para auxiliar nosso desenvolvimento como:
+
+Aceleração de nossa escrita com Auto-complete ou IntelliSense.
+Formatação de palavras e bloco de códigos: maior visibilidade do código.
+Análise de erro de sintaxe: ver se tem erros de digitação no código.
+Compilação do programa.
+Depuração (acompanhamento) de execução do programa.
+
+Maven: É uma ferramenta de automação de compilação utilizada primariamente em projetos Java, mas hoje também é utilizada para construir e gerenciar projetos escritos em C#, Ruby, Scala e outras linguagens.
+
+Git:
+
+Ele quem gerencia as versões do seu código
+
+README.file: É possível adicionar um arquivo README a um repositório para comunicar informações importantes sobre o seu projeto. Um LEIAME, junto com uma licença de repositório, um arquivo de citação, diretrizes de contribuição e um código de conduta, comunica as expectativas do projeto e ajuda você a gerenciar contribuições.
+
+.gitignore: Você pode criar um arquivo .gitignore no diretório raiz do repositório para informar o Git de quais arquivos e diretórios devem ser ignorados durante um commit. Para compartilhar as regras de ignorar com outros usuários que clonam o repositório, faça commit do arquivo .gitignore no repositório.
+
+Branches: é uma ramificação do seu projeto (branch na tradução é "ramo").
+
+- É um ponteiro móvel para um commit no histórico do repositório 
+- Quando você cria uma nova branch apartir de outra, a novo se inicia apontando para o mesmo commit da branch que estava quando foi criada 
+
+Comandos no Git:
+
+git status : Ver as alterações que não commitamos ainda
+git stash : Armazena temporariamente as alterações não commitadas no seu diretório de trabalho e área de staging, para que você possa trabalhar em outra coisa sem perder essas alterações. Você pode posteriormente aplicar essas mudanças de volta ao seu repositório.
+git fetch : baixa as mudanças do repositório remoto para o repositório local, atualizando as referências de branches remotos, mas não altera o estado do seu branch local ou seu diretório de trabalho.
+git merge (branch que quer mesclar) : mescla a branch atual com a escolhida
+git branch : mostra as nossas branchs
+git branch -v : mostra os últimos commits de cada branch
+git checkout (nome da branch) : cria uma nova branch e coloca o ponteiro no commit da branch já existente / também serve para mudar de uma branch para outra
+git reset (nome pasta) : descarta um arquivo no seu repositório 
+git reset --hard (commit) : é usada para descartar à força quaisquer alterações e modificações locais feitas nos arquivos.
+git reset --mixed (commit) : exclui um commit, e mescla com o anterior
+git reset --soft (commit) : exclui um commit, e deixa as alterações feitas no diretório de trabalho, onde você pode pegar o que precisa e colocar na outra.
+git commit -m : grava alterações no repertório
+git commit --amend -m : trocar descrição do seu commit
+git pull : "puxa" as alterações feitas no repositório remoto e traz para o local (busca e mescla)
+git push: "empurra" as alterações feitas no repositório local e traz para o remoto
+git init : é um comando único que você usa durante a configuração inicial de um novo repositório
+git remote add origin url: vincular um repositório local em um remoto
+git add : adiciona um arquivo na área de preparação
+git clone url (nome do repositório local) : copia um arquivo de um repositório remoto
+git status : mostrar os status da nossa arvore de trabalho e também da área de preparação
+git restore (nome do arquivo) : restaura um arquivo, com base no seu ultimo commit
+echo (nome do arquivo) > .gitignore : informa quais arquivos e diretórios devem ser ignorados durante um commit
+rm -rf .git : remove o .git
+mkdir : cria um ou mais diretórios novos especificados pelo parâmetro Directory
+cd : abre uma pasta do seu repositório local
+touch : cria um arquivo vazio
+cat : exibir conteúdo 
+
+Tipos de Commits:
+
+feat:	Adiciona uma nova funcionalidade ao projeto.	feat: add USENAME.md profile
+fix:	Corrige um bug ou problema no projeto.	fix: fixed issue fix#IssueNumber
+docs:	Altera a documentação do projeto.	docs: update README.md
+style:	Realiza mudanças na aparência, sem alterar a funcionalidade.	style: add EFFECTNAME to COMPONENT
+refactor:	Realiza mudanças no código que não alteram a funcionalidade.	refactor: refactor at CLASSNAME
+test:	Adiciona ou modifica testes no projeto.	test: add unit test for UserService
+
+GitHub:
+
+Ele é o servidor que hospeda seu código ( repositório remoto)
+
+Versionamento de código: é uma prática que consiste em acompanhar e registrar todas as alterações feitas nos arquivos de código-fonte de um projeto ao longo do tempo.
+
+Sistemas de controle de versão: Controlam as versões de um arquivo ao longo do tempo
+
+Registra o histórico de atualizações de um arquivo
+Gerencia quais foram as alterações, a data, auto, etc...
+Organização, controle e segurança
+
+Tipos de controle de versão:
+
+VCS Centralizado (CVCS): Apenas um servidor contendo os arquivos
+Ex: CVS e Subversion
+
+VCS Distribuído (DVCS): Cada repositório é duplicado localmente, ou seja, além de ter o servidor, você terá uma cópia em sua máquina também. Clona o repositório completo, o que inclui o histórico de versões.
+Ex: Git e Mercurial
+
+Cada clonagem é um backup e abre diversas possibilidades, como possibilitar um fluxo de trabalho flexível e a possibilidade de trabalhar sem conexão a rede.
+
+Projetos Open Source:
+
+São projetos de código aberto, livre para serem utilizados, modificados e distribuídos. Alguns exemplos são:
+
+Linux, sob a licença GNU General Public License (GPL)
+Roadmaps DIO, sob a licença MIT License (MIT)
+
+MD (Markdown):
+
+Markdown é uma linguagem voltada para formatação de textos
+
+"Comandos":
+
+# :Para criar um título, comece o parágrafo com cerquilha (#). O número de cerquilhas define o nível do título, do mais alto (#) ao mais baixo (######).
+[] : Para criar um link embutido
+() : Para criar um link 
+
+
+
+
+
+
+
+
+
+ 
