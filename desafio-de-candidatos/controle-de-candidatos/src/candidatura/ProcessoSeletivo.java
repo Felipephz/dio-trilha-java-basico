@@ -1,14 +1,49 @@
 package candidatura;
 
 //import da utilidade de valores aleatórios
+import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class ProcessoSeletivo {
     public static void main(String[] args) {
         System.out.println("Processo Seletivo");
-        
-        selecaoCandidatos();
-    }
+            String candidatos [] = {"FELIPE","ARTUR","MAQUENA","BICHOLAS","ISAAC"};
+            for (String candidato : candidatos)
+            entrandoEmContato(candidato);
+    }   
+        static void entrandoEmContato (String candidato) {
+            int tentativasRealizadas = 1;
+            boolean continuarTentando = true;
+            boolean atendeu=false;
+            do {
+                atendeu=atender();
+                continuarTentando =!atendeu;
+                if (continuarTentando)
+                    tentativasRealizadas++;
+                else
+                    System.out.println("CONTATO REALIZADO COM SUCESSO");
+            }
+            while (continuarTentando && tentativasRealizadas<3); {
+                if (atendeu)
+                System.out.println("CONSEGUIMOS CONTATO COM " + candidato + " NA " + tentativasRealizadas + " TENTATIVA");
+                else
+                System.out.println("NÃO CONSEGUIMOS CONTATO COM " + candidato + ", NÚMERO MAXIMO DE TENTATIVAS " + tentativasRealizadas );
+            }
+        }
+        //metodo auxiliar
+        static boolean  atender () {
+            return new Random().nextInt(3)==1;
+        }
+        static void imprimirCandidatos () {
+            String candidatos [] = {"FELIPE","ARTUR","MAQUENA","BICHOLAS","ISAAC"};
+
+            for (int indice = 0; indice < candidatos.length; indice++){
+            System.out.println("O candidato de nº " + (indice+1) + " é " + candidatos[indice]);
+            }
+            //metodo abreviado com for each
+            for (String candidato : candidatos)
+            System.out.println("O candidato escolhido é: " + candidato);
+        }
         static void selecaoCandidatos () {
             String candidatos [] = {"FELIPE","ARTUR","MAQUENA","BICHOLAS","ISAAC","ANTONY","TERRY","PEDRO","MATHEUS","ELIAS","DOUGLAS"};
             int candidatosSelecionados = 0;
