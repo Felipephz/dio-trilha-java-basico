@@ -4,7 +4,7 @@ public class Pessoa {
         private String cpf;
         private String endereço;
 
-        //metodo para podermos colocar as respectivas informações do usuario
+        //metodo construtor para podermos colocar as respectivas informações do usuario
         public Pessoa (String cpf, String nome) {
             this.cpf = cpf;
             this.nome = nome;
